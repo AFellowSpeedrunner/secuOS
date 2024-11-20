@@ -85,17 +85,17 @@ void pongo_main_task() {
     sep_setup();
 
     puts("");
-    puts("#==================");
+    puts("#==========================================");
     puts("#");
-    puts("# pongoOS " PONGO_VERSION);
+    puts("# secuOS " PONGO_VERSION);
     puts("#");
-    puts("# https://checkra.in");
+    puts("# SecureROM? More like InSecureROM.");
     puts("#");
-    puts("#==================");
+    puts("#==========================================");
     screen_mark_banner();
 
     iprintf("Booted by: %s\n", (const char*)dt_get_prop("chosen", "firmware-version", NULL));
-    strcpy(dt_get_prop("chosen", "firmware-version", NULL), "pongoOS-");
+    strcpy(dt_get_prop("chosen", "firmware-version", NULL), "secuOS-");
     strcat(dt_get_prop("chosen", "firmware-version", NULL), PONGO_VERSION);
 #ifdef __clang__
     iprintf("Built with: Clang %s\n", __clang_version__);

@@ -24,6 +24,10 @@
  * SOFTWARE.
  *
  */
+
+ #pragma clang diagnostic push
+ #pragma clang diagnostic ignored "-Wunused-but-set-variable"
+
 #include <errno.h>
 #include <stdlib.h>
 #include <pongo.h>
@@ -1011,3 +1015,4 @@ void vm_release(struct vm_space* vmspace) {
         free(vmspace);
     }
 }
+#pragma clang diagnostic pop
