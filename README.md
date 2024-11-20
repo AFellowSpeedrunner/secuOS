@@ -35,7 +35,7 @@ The Makefile will create binaries in `build/`:
 
 ## Usage with checkra1n
 
-    checkra1n -k secuOS.bin                  # Boots to Pongo shell, KPF not available
+    checkra1n -k secuOS.bin                  # Boots to secuOS
 
 ## Contributions
 
