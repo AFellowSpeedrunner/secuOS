@@ -79,12 +79,12 @@ CHECKRA1N_CC            ?= $(EMBEDDED_CC)
 
 .PHONY: all always clean distclean
 
-all: $(BUILD)/Pongo.bin | $(BUILD)
+all: $(BUILD)/secuOS.bin | $(BUILD)
 
-$(BUILD)/Pongo.bin: $(BUILD)/vmacho $(BUILD)/Pongo | $(BUILD)
-	$(BUILD)/vmacho -f $(BUILD)/Pongo $@
+$(BUILD)/secuOS.bin: $(BUILD)/vmacho $(BUILD)/secuOS | $(BUILD)
+	$(BUILD)/vmacho -f $(BUILD)/secuOS $@
 
-$(BUILD)/Pongo: Makefile $(SRC)/boot/entry.S $(STAGE3_ENTRY_C) $(PONGO_C) $(PONGO_DRIVERS_C) $(LIB)/lib/libc.a | $(BUILD)
+$(BUILD)/secuOS: Makefile $(SRC)/boot/entry.S $(STAGE3_ENTRY_C) $(PONGO_C) $(PONGO_DRIVERS_C) $(LIB)/lib/libc.a | $(BUILD)
 	$(EMBEDDED_CC) -o $@ $(EMBEDDED_CC_FLAGS) $(PONGO_CC_FLAGS) $(SRC)/boot/entry.S $(STAGE3_ENTRY_C) $(PONGO_C) $(PONGO_DRIVERS_C)
 
 $(BUILD)/vmacho: Makefile $(AUX)/vmacho.c | $(BUILD)
