@@ -2,6 +2,8 @@
 
 A work-in-progress operating system for iPhones with an A6 to A11 chip built from pongoOS using checkra1n for booting.
 
+"SecureROM? More like InSecureROM."
+
 ## Building on macOS
 
 - Install Xcode's command-line utilities
