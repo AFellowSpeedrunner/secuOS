@@ -24,8 +24,8 @@ A work-in-progress operating system for iPhones with an A6 to A11 chip built fro
 
 ### Building PongoTerm
 
-- Navigate to scripts
-- Run make
+- Navigate to `scripts/`
+- Run `make pongoterm`
 
 If `clang`, `ld64` or `cctools-strip` don't have their default names/paths, you'll want to change their invocation. For reference, the default variables are equivalent to:
 
