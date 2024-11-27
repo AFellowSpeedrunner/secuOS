@@ -44,9 +44,7 @@ jobs:
       - name: Archive
         uses: actions/upload-artifact@v2
         with:
-          name: PongoOS
+          name: secuOS
           path: |
-            build/checkra1n-kpf-pongo
-            build/Pongo
-            build/Pongo.bin
-            build/PongoConsolidated.bin
+            build/secuOS
+            build/secuOS.bin
