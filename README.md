@@ -22,6 +22,11 @@ A work-in-progress operating system for iPhones with an A6 to A11 chip built fro
   - On other distros these can be downloaded from [this repo](https://github.com/Siguza/ld64/releases). They can be self-compiled but it's more recommended to use the releases and copy binaries to /usr/bin.
 - Run `make all`
 
+### Building PongoTerm
+
+- Navigate to scripts
+- Run make
+
 If `clang`, `ld64` or `cctools-strip` don't have their default names/paths, you'll want to change their invocation. For reference, the default variables are equivalent to:
 
     EMBEDDED_CC=clang EMBEDDED_LDFLAGS=-fuse-ld=/usr/bin/ld64 STRIP=cctools-strip make all
@@ -37,6 +42,7 @@ The Makefile will create binaries in `build/`:
 ## Usage with checkra1n
 
     checkra1n -k secuOS.bin                  # Boots to secuOS
+    scripts/pongoterm                        # Used to interact with secuOS (read 'Building PongoTerm') but sudo may be required
 
 ## Contributions
 
@@ -51,4 +57,4 @@ If you want to import third-party code that cannot be licensed as such, that sha
   - This includes a custom patch for Newlib to work with the Darwin ABI.
 - An example module exists in `example/` which can be used for secuOS development.
 - Scripts to communicate with the secuOS shell (secuShell) are in `scripts/`.
-  - This includes `pongoterm`, an interactive shell client for macOS and Linux.
+  - This includes `pongoterm`, an interactive shell client for macOS and Linux. Read the 'Building PongoTerm' section.
