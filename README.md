@@ -22,14 +22,14 @@ A work-in-progress operating system for iPhones with an A6 to A11 chip built fro
   - On other distros these can be downloaded from [this repo](https://github.com/Siguza/ld64/releases). They can be self-compiled but it's more recommended to use the releases and copy binaries to /usr/bin.
 - Run `make all`
 
-### Building PongoTerm
-
-- Navigate to `scripts/`
-- Run `make pongoterm`
-
 If `clang`, `ld64` or `cctools-strip` don't have their default names/paths, you'll want to change their invocation. For reference, the default variables are equivalent to:
 
     EMBEDDED_CC=clang EMBEDDED_LDFLAGS=-fuse-ld=/usr/bin/ld64 STRIP=cctools-strip make all
+
+## Building PongoTerm
+
+- Navigate to `scripts/`
+- Run `make pongoterm`
 
 ## Build artifacts
 
